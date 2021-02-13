@@ -40,3 +40,12 @@ def authorize_creds(creds,authorizedcreds='authorizedcreds.dat'):
  
     print('Auth Successful')
     return webmasters_service
+
+
+creds = {"installed":{"client_id":"40952068207-1os2e4hthe1tsljqv0td1pqffshq7mld.apps.googleusercontent.com","project_id":"innate-client-298318","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"5N9wYTs_-L7KhFgYJTN3ZQy5","redirect_uris":["urn:ietf:wg:oauth:2.0:oob"]}}#"http://localhost"]}}
+import json
+with open('creds.json', 'w') as f:
+    json.dump(creds, f)
+    
+creds = '/content/creds.json'
+webmasters_service = authorize_creds(creds)  
