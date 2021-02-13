@@ -59,5 +59,5 @@ import json
 with open('creds.json', 'w') as f:
     json.dump(creds, f)
     
-creds = '/content/creds.json'
+creds = 'creds.json'
 webmasters_service = authorize_creds(creds)  
